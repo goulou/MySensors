@@ -17,4 +17,5 @@ target_include_directories(
 	)
 target_link_libraries(${PROJECT_NAME} Arduino)
 target_link_libraries(${PROJECT_NAME} Arduino_SPI)
+target_link_libraries(${PROJECT_NAME} Arduino_EEPROM)
 
