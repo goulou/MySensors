@@ -1,5 +1,5 @@
 # Project name
-project(MySensors)
+project(MySensors_${DEVICE_NAME})
 
 # CMake version
 cmake_minimum_required(VERSION 2.6)
@@ -15,7 +15,7 @@ target_include_directories(
 	${PROJECT_NAME} PUBLIC
 	${CMAKE_CURRENT_SOURCE_DIR}
 	)
-target_link_libraries(${PROJECT_NAME} Arduino)
-target_link_libraries(${PROJECT_NAME} Arduino_SPI)
-target_link_libraries(${PROJECT_NAME} Arduino_EEPROM)
+target_link_libraries(${PROJECT_NAME} Arduino_${DEVICE_NAME})
+target_link_libraries(${PROJECT_NAME} Arduino_SPI_${DEVICE_NAME})
+target_link_libraries(${PROJECT_NAME} Arduino_EEPROM_${DEVICE_NAME})
 

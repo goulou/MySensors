@@ -1,5 +1,5 @@
 # Project name
-project(MySensors_DallasTemperature)
+project(MySensors_DallasTemperature_${DEVICE_NAME})
 
 # CMake version
 cmake_minimum_required(VERSION 2.6)
@@ -16,6 +16,6 @@ target_include_directories(
 	${PROJECT_NAME} PUBLIC
 	${CMAKE_CURRENT_SOURCE_DIR}
 	)
-target_link_libraries(${PROJECT_NAME} MySensors)
-target_link_libraries(${PROJECT_NAME} MySensors_OneWire)
+target_link_libraries(${PROJECT_NAME} MySensors_${DEVICE_NAME})
+target_link_libraries(${PROJECT_NAME} MySensors_OneWire_${DEVICE_NAME})
 
