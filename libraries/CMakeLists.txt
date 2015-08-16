@@ -1,5 +1,6 @@
 
 add_subdirectory(MySensors)
+add_subdirectory(PinChangeInt)
 add_subdirectory(DHT)
 add_subdirectory(Adafruit_BMP085)
 add_subdirectory(DallasTemperature)
