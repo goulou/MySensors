@@ -7,5 +7,6 @@ add_subdirectory(DallasTemperature)
 add_subdirectory(OneWire)
 add_subdirectory(SI7021)
 add_subdirectory(NewPing)
+add_subdirectory(EmonLib)
 #add_subdirectory(LiquidCrystal)
 
