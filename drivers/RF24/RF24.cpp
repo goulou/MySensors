@@ -300,9 +300,10 @@ LOCAL bool RF24_sendMessage(const uint8_t recipient, const void *buf, const uint
 	RF24_spiMultiByteTransfer((recipient == RF24_BROADCAST_ADDRESS ||
 	                           noACK) ? RF24_CMD_WRITE_TX_PAYLOAD_NO_ACK :
 	                          RF24_CMD_WRITE_TX_PAYLOAD, (uint8_t *)buf, len, false );
+	delayMicroseconds(30); // datasheet: Pulse CE at least 10us
 	// go, TX starts after ~10us, CE high also enables PA+LNA on supported HW
 	RF24_ce(HIGH);
-	delayMicroseconds(10); // datasheet: Pulse CE at least 10us
+	delayMicroseconds(50); // datasheet: Pulse CE at least 10us
 	RF24_ce(LOW);
 	// timeout counter to detect HW issues
 	uint16_t timeout = 0xFFFF;
